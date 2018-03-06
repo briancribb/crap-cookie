@@ -1,5 +1,5 @@
 /* For now I'll use old-school JavaScxript so I don't have to use Babel. I'll most likely make a new-school version with ES6 at some point. */
-var crapCookie = (function(){
+window.crapCookie = (function(){
 	// Stuff to be kept in the clusure.
 
 	// Object to return.
