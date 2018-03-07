@@ -2,11 +2,10 @@
 A cookie utility for creating, reading, adjusting and purging JavaScript cookies.
 
 ## Installation
-There aren't any tricks to installing this. You don't have to create an instance or mess with prototypes. As soon as the file loads, a global variable called <pre>crapCookie</pre> is defined on the window object.
+There aren't any tricks to installing this. You don't have to create an instance or mess with prototypes. As soon as the file loads, a global variable called <code>crapCookie</code> is defined on the window object.
 
 ## Create
-To create a browser cookie, use the global variable <code>crapCookie</code> with an options object as it's only argument. The options are:\
-
+To bake a crap cookie, you just call a method on the new global variable like this: <code>crapCookie.create(options)</code>. The options object has a few properties that you should know about. They are:
 
 * <strong>key</strong>: the name of the cookie. It's called a key because it's part of a key/value pair.<strong>If you do not pass in a key, then this method will do absolutely nothing.</strong>
 * <strong>value</strong>: the string value that will be stored in the cookie.
@@ -14,13 +13,12 @@ To create a browser cookie, use the global variable <code>crapCookie</code> with
 * <strong>hours</strong>: defaults to <code>0</code>. This number will be added to the lifespan of the cookie in hours.
 * <strong>minutes</strong>: defaults to <code>0</code>. If a number is assigned here, then that number will be added to the cookie's total lifespan in minutes.
 
-
 So if you want to create a cookie which will last for three days, you would do it like this:
 <pre>
 crapCookie.create({
-	key: "myCookieName",
-	value:"Stuff I'm storing in this cookie.",
-	days:3
+  key: "myCookieName",
+  value:"Stuff I'm storing in this cookie.",
+  days:3
 });
 </pre>
 
@@ -28,11 +26,11 @@ Days, hours and minutes will be added together an applied to a brand new date ob
 
 <pre>
 crapCookie.create({
-	key: "shortLivedCookie",
-	value:"This cookie last for less than a day.",
-	days:0,
-	hours: 6,
-	minutes: 32
+  key: "shortLivedCookie",
+  value:"This cookie last for less than a day.",
+  days:0,
+  hours: 6,
+  minutes: 32
 });
 </pre>
 
@@ -51,4 +49,4 @@ Of course, this means that you can pass a brand new name into the <code>read</co
 ## Purge
 This method will set an existing cookie's value to an empty string and it's expiration date to the current time. That's how you get rid of cookies in JavaScript, assuming that you're not mucking about in the dev tools.
 
-This method works by calling the <code>adjust</code> method with a pre-defined options object. And before you say anything, <strong>yes</strong> I am aware that the <code>adjust</code> method is just going to call the <code>create</code> method with whatever options object it uses. You could easily use the <code>create</code>
+This method works by calling the <code>adjust</code> method with a pre-defined options object. And before you say anything, <strong>yes</strong> I am aware that the <code>adjust</code> method is just going to call the <code>create</code> method with whatever options object it uses. You could easily use the <code>create</code> method to do this, but I happen to think it's funny to pass that options object along like water in a bucket brigade and this is all a big poop joke anyway so what the hell do you want from me?
