@@ -7,13 +7,13 @@ There aren't any tricks to installing this. You don't have to create an instance
 ##Create
 To create a browser cookie, use the global variable <code>crapCookie</code> with an options object as it's only argument. The options are:\
 
-<ul>
-	<li><strong>key</strong>: the name of the cookie. It's called a key because it's part of a key/value pair.<strong>If you do not pass in a key, then this method will do absolutely nothing.</strong></li>
-	<li><strong>value</strong>: the string value that will be stored in the cookie.</li>
-	<li><strong>days</strong>: defaults to <code>1</code>. If you want the cookie to last less than a day, then pass in zero along with some kind of number for hours and/or minutes.</li>
-	<li><strong>hours</strong>: defaults to <code>0</code>. This number will be added to the lifespan of the cookie in hours.</li>
-	<li><strong>minutes</strong>: defaults to <code>0</code>. If a number is assigned here, then that number will be added to the cookie's total lifespan in minutes.</li>
-</ul>
+
+*<strong>key</strong>: the name of the cookie. It's called a key because it's part of a key/value pair.<strong>If you do not pass in a key, then this method will do absolutely nothing.</strong>
+*<strong>value</strong>: the string value that will be stored in the cookie.
+*<strong>days</strong>: defaults to <code>1</code>. If you want the cookie to last less than a day, then pass in zero along with some kind of number for hours and/or minutes.
+*<strong>hours</strong>: defaults to <code>0</code>. This number will be added to the lifespan of the cookie in hours.
+*<strong>minutes</strong>: defaults to <code>0</code>. If a number is assigned here, then that number will be added to the cookie's total lifespan in minutes.
+
 
 So if you want to create a cookie which will last for three days, you would do it like this:
 <pre>
