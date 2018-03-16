@@ -45,8 +45,23 @@ crapCookie.read('shortLivedCookie');
 Okay, so... you don't really edit cookies. You just create a new cookie with the same name and overwrite the stuff that's in there. So this method works exactly like the <code>create</code> method.
 
 Of course, this means that you can pass a brand new name into the <code>read</code> method to make a new cookie and pass an existing name into the <code>create</code> function to edit an existing cookie. I realize that this may seem redundant to you, but in my defense I must remind you that this entire repo is based upon a poop joke and I can deliver said poop joke without the letter "A". 
+<pre>
+crapCookie.adjust({
+  key: "shortLivedCookie",
+  value:"This is my new info.",
+  days:0,
+  hours: 6,
+  minutes: 32
+});
+// Yes you have to enter the time info again 
+// or you get the default of one day.
+</pre>
+
 
 ## Purge
 This method will set an existing cookie's value to an empty string and it's expiration date to the current time. That's how you get rid of cookies in JavaScript, assuming that you're not mucking about in the dev tools.
+<pre>
+crapCookie.purge("shortLivedCookie");
+</pre>
 
 This method works by calling the <code>adjust</code> method with a pre-defined options object. And before you say anything, <strong>yes</strong> I am aware that the <code>adjust</code> method is just going to call the <code>create</code> method with whatever options object it uses. You could easily use the <code>create</code> method to do this, but I happen to think it's funny to pass that options object along like water in a bucket brigade and this is all a big poop joke anyway so what the hell do you want from me?
