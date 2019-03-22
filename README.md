@@ -44,7 +44,7 @@ crapCookie.read('shortLivedCookie');
 ## Adjust
 Okay, so... you don't really edit cookies. You just create a new cookie with the same name and overwrite the stuff that's in there. So this method works exactly like the <code>create</code> method.
 
-Of course, this means that you can pass a brand new name into the <code>read</code> method to make a new cookie and pass an existing name into the <code>create</code> function to edit an existing cookie. I realize that this may seem redundant to you, but in my defense I must remind you that this entire repo is based upon a poop joke and I can deliver said poop joke without the letter "A". 
+Of course, this means that you can pass a brand new name into the <code>read</code> method to make a new cookie and pass an existing name into the <code>create</code> function to edit an existing cookie. I realize that this may seem redundant to you, but in my defense I must remind you that this entire repo is based upon a poop joke and I cannot deliver said poop joke without the letter "A". 
 <pre>
 crapCookie.adjust({
   key: "shortLivedCookie",
